@@ -1,4 +1,5 @@
 import './styles/main.scss';
+import 'boxicons/css/boxicons.min.css';
 
 function App() {
 	return (
@@ -36,6 +37,17 @@ function App() {
 					<div className='btn-wrapper'>
 						<a href='#'>Hire Me</a>
 						<a href='#'>Reach Out</a>
+					</div>
+					<div className='link-wrapper'>
+						<a href=''>
+							<i className='bx bxl-twitter'></i>
+						</a>
+						<a href=''>
+							<i className='bx bxl-linkedin'></i>
+						</a>
+						<a href=''>
+							<i className='bx bxl-github'></i>
+						</a>
 					</div>
 				</div>
 			</section>
