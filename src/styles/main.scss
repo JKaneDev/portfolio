@@ -28,11 +28,16 @@
 .header {
 	display: flex;
 	align-items: center;
-	margin-bottom: auto;
+	margin: 0;
 	padding: 1rem 10rem;
 	width: 100%;
 	position: fixed;
 	min-width: 1000px;
+	z-index: 3;
+	background-color: black;
+	top: 0;
+	right: 0;
+	left: 0;
 
 	.logo {
 		font-weight: 600;

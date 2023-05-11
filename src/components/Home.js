@@ -1,4 +1,9 @@
-const Home = () => {
+const Home = ({ aboutRef }) => {
+	const handleClick = (e) => {
+		e.preventDefault();
+		aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+	};
+
 	return (
 		<div className='App'>
 			<header className='header'>
@@ -10,7 +15,7 @@ const Home = () => {
 					<a href='' className='hoverUnderlineEffect'>
 						Home
 					</a>
-					<a href='' className='hoverUnderlineEffect'>
+					<a href='' className='hoverUnderlineEffect' onClick={handleClick}>
 						About
 					</a>
 					<a href='' className='hoverUnderlineEffect'>
