@@ -24,6 +24,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
+
 		button {
 			padding: 0.5rem;
 			color: white;
@@ -44,6 +45,14 @@
 			z-index: 1;
 			overflow: hidden;
 			cursor: pointer;
+
+			&.selected {
+				border: 2px solid white;
+			}
+
+			&:active {
+				border: 2px solid white;
+			}
 
 			&::before {
 				content: '';
@@ -77,6 +86,60 @@
 					color: $primary-color;
 				}
 			}
+		}
+	}
+}
+
+.project-options {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 2rem;
+	position: relative;
+
+	a {
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background-color: transparent;
+		border: $border-primary;
+		border-radius: 50%;
+		font-size: 20px;
+		text-decoration: none;
+		z-index: 1;
+		overflow: hidden;
+		transition: $transition-main;
+
+		.bx {
+			color: $secondary-color;
+			transition: $transition-main;
+			font-size: 26px;
+		}
+
+		&:hover .bx {
+			color: black;
+			transform: rotate(-360deg);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0%;
+			height: 100%;
+			background: $secondary-color;
+
+			z-index: -1;
+			transition: $transition-main;
+		}
+
+		&:hover::before {
+			width: 100%;
 		}
 	}
 }

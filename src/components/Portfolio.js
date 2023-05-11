@@ -2,38 +2,20 @@ import '../styles/portfolio.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { forwardRef } from 'react';
+import { projectImages } from './data';
 
 const Portfolio = forwardRef((props, ref) => {
-	const [currentImages, setCurrentImages] = useState([]);
+	const [currentProject, setCurrentProject] = useState([]);
+	const [selectedButton, setSelectedButton] = useState(null);
 
 	useEffect(() => {
-		setCurrentImages(projectImages['Twitter-Ethereum']);
+		setCurrentProject(projectImages['Twitter-Ethereum']);
 	}, []);
 
-	useEffect(() => {
-		console.log('Current Images: ', currentImages);
-	}, [currentImages]);
-
-	const projectImages = {
-		'Twitter-Ethereum': [
-			'https://dl.dropboxusercontent.com/s/dpad8edfh0wsujh/Feed-smaller.jpg?dl=0',
-			'https://dl.dropboxusercontent.com/s/mnhi4p4w1cahxru/Twitter-comments.jpg?dl=0',
-			'https://dl.dropboxusercontent.com/s/3wptb2dxp0bsy4g/CreateProfile-smaller.jpg?dl=0',
-			'https://dl.dropboxusercontent.com/s/wssc2um22v16ega/Auction-smaller.jpg?dl=0',
-		],
-		'XTK Exchange': ['https://dl.dropboxusercontent.com/s/14xg275trdtkxnd/Exchange-new.jpg?dl=0'],
-		'Gaming Store': [
-			'https://dl.dropboxusercontent.com/s/6ei83g3h776xs8l/home.jpg?dl=0',
-			'https://dl.dropboxusercontent.com/s/tqjr868hmewcvkd/checkout.jpg?dl=0',
-			'https://dl.dropboxusercontent.com/s/lex6jiwehpa826y/wishlist.jpg?dl=0',
-			'https://dl.dropboxusercontent.com/s/rb0issrj73b8vql/search.jpg?dl=0',
-		],
-	};
-
 	const handleButtonClick = (project) => {
-		setCurrentImages(projectImages[project]);
+		setCurrentProject(projectImages[project]);
 	};
 
 	return (
@@ -42,18 +24,36 @@ const Portfolio = forwardRef((props, ref) => {
 				Recent <span>Projects</span>
 			</h2>
 			<div className='project-select-wrapper'>
-				<button className='project-btns' onClick={() => handleButtonClick('Twitter-Ethereum')}>
+				<button
+					className={`project-btns ${selectedButton === 'Twitter-Ethereum' ? 'selected' : ''}`}
+					onClick={() => {
+						handleButtonClick('Twitter-Ethereum');
+						setSelectedButton('Twitter-Ethereum');
+					}}
+				>
 					Twitter-Ethereum
 				</button>
-				<button className='project-btns' onClick={() => handleButtonClick('XTK Exchange')}>
+				<button
+					className={`project-btns ${selectedButton === 'XTK Exchange' ? 'selected' : ''}`}
+					onClick={() => {
+						handleButtonClick('XTK Exchange');
+						setSelectedButton('XTK Exchange');
+					}}
+				>
 					XTK Exchange
 				</button>
-				<button className='project-btns' onClick={() => handleButtonClick('Gaming Store')}>
+				<button
+					className={`project-btns ${selectedButton === 'Gaming Store' ? 'selected' : ''}`}
+					onClick={() => {
+						handleButtonClick('Gaming Store');
+						setSelectedButton('Gaming Store');
+					}}
+				>
 					Gaming Store
 				</button>
 			</div>
 
-			{currentImages ? (
+			{currentProject.images ? (
 				<div className='portfolio-container'>
 					<Swiper
 						modules={[Navigation, Pagination]}
@@ -64,7 +64,7 @@ const Portfolio = forwardRef((props, ref) => {
 						pagination={{ clickable: true }}
 						className='swiper'
 					>
-						{currentImages.map((img, index) => (
+						{currentProject.images.map((img, index) => (
 							<SwiperSlide key={index} className='swiper-slide'>
 								<img src={img} alt={`Slide ${index}`} />
 							</SwiperSlide>
@@ -78,6 +78,17 @@ const Portfolio = forwardRef((props, ref) => {
 			) : (
 				<></>
 			)}
+			<div className='project-options'>
+				<a href={currentProject.github} target='_blank' rel='noopener noreferrer' className='project-options'>
+					<i class='bx bxl-github'></i>
+				</a>
+				<a href={currentProject.livesite} target='_blank' rel='noopener noreferrer' className='project-options'>
+					<i class='bx bx-show'></i>
+				</a>
+				<a href={currentProject.walkthrough} target='_blank' rel='noopener noreferrer' className='project-options'>
+					<i class='bx bx-video-recording'></i>
+				</a>
+			</div>
 		</section>
 	);
 });

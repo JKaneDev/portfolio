@@ -10,7 +10,6 @@ const Home = ({ aboutRef }) => {
 				<a href='#' className='logo'>
 					James.
 				</a>
-
 				<nav className='navbar'>
 					<a href='' className='hoverUnderlineEffect'>
 						Home
