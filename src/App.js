@@ -7,14 +7,16 @@ import Portfolio from './components/Portfolio';
 import { useRef } from 'react';
 
 function App() {
+	const homeRef = useRef(null);
 	const aboutRef = useRef(null);
+	const portfolioRef = useRef(null);
 	// ADD LINK NAVIGATION ON LOAD
 
 	return (
 		<>
-			<Home aboutRef={aboutRef} />
+			<Home homeRef={homeRef} aboutRef={aboutRef} portfolioRef={portfolioRef} />
 			<About ref={aboutRef} />
-			<Portfolio />
+			<Portfolio ref={portfolioRef} />
 		</>
 	);
 }

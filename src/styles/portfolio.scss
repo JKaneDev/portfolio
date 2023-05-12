@@ -48,6 +48,7 @@
 
 			&.selected {
 				border: 2px solid white;
+				color: white;
 			}
 
 			&:active {
@@ -74,18 +75,18 @@
 				color: $secondary-color;
 			}
 
-			&:nth-child(2) {
-				background-color: transparent;
-				color: $secondary-color;
+			// &:nth-child(2) {
+			// 	background-color: transparent;
+			// 	color: $secondary-color;
 
-				&::before {
-					background-color: $secondary-color;
-				}
+			// 	&::before {
+			// 		background-color: $secondary-color;
+			// 	}
 
-				&:hover {
-					color: $primary-color;
-				}
-			}
+			// 	&:hover {
+			// 		color: $primary-color;
+			// 	}
+			// }
 		}
 	}
 }

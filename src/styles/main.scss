@@ -86,9 +86,7 @@
 				transition: all 0.2s ease-in-out;
 			}
 
-			&:hover:before,
-			&:active,
-			&:focus {
+			&:hover:before {
 				width: 100%;
 				left: 0;
 				background-color: $secondary-color;
