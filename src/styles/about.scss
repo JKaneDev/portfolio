@@ -3,10 +3,14 @@
 
 .about {
 	font-family: 'Poppins', 'Helvetica', sans-serif;
-	background-color: white;
+	background: url('https://dl.dropboxusercontent.com/s/ei179rngqd06ooq/about-section-background%5D.png?dl=0') no-repeat;
+	background-size: cover;
+	background-position: center;
 	height: 100vh;
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
+	padding: 0 10%;
 
 	span {
 		color: $secondary-color;
@@ -30,6 +34,7 @@
 
 		p {
 			max-width: 600px;
+			padding-right: 3rem;
 		}
 	}
 

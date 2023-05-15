@@ -46,12 +46,17 @@ const Home = ({ homeRef, aboutRef, portfolioRef }) => {
 					<h1>Hi, I'm James Kane</h1>
 					<h3>Blockchain Developer</h3>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consectetur eum beatae quasi molestias eaque
-						asperiores, id quibusdam aliquid blanditiis optio quod placeat tenetur error, nihil, vel accusantium quaerat
-						corporis.
+						Web3 enthusiast on an adventure to build the future of the internet and participating in the revolution of a
+						decentralized web. Fostering an ever-growing obsession with Blockchain and NFTs. Wondering if I'm the only
+						one that has frequent dreams about Smart Contracts.
 					</p>
 					<div className='btn-wrapper'>
-						<a href='#' target='_blank' rel='noopener noreferrer'>
+						<a
+							href='https://dl.dropboxusercontent.com/s/pmbo3wzykfmmfc7/CV%201.pdf?dl=0'
+							download
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							Download CV
 						</a>
 						<a href='mailto:jtkanedev@gmail.com' target='_blank' rel='noopener noreferrer'>
