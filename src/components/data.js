@@ -8,7 +8,7 @@ export const projectImages = {
 		],
 		github: 'https://github.com/JKaneDev/decentralized-twitter',
 		livesite: 'https://twitter-ethereum.herokuapp.com/',
-		walkthrough: 'youtube.com/link',
+		walkthrough: 'https://www.youtube.com/watch?v=0VoMZnc1dDk',
 	},
 	'XTK Exchange': {
 		images: ['https://dl.dropboxusercontent.com/s/14xg275trdtkxnd/Exchange-new.jpg?dl=0'],
