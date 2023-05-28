@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+@import '_variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: $font-color;
+
+	a {
+		list-style: none;
+		text-decoration: none;
+		transition: $transition-main;
+		position: relative;
+	}
+}
+
+.App {
+	min-height: 100vh;
+	width: 100vw;
+
+	font-family: $font-main;
+}
+
+// HEADER STYLING START
+
+.header {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 1rem 10rem;
+	width: 100%;
+	position: fixed;
+	min-width: 1000px;
+	z-index: 3;
+	background-color: black;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	.logo {
+		font-weight: 600;
+		font-size: $header-font-size;
+		text-decoration: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			animation: showRight 1s ease forwards;
+		}
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: 3.5rem;
+		margin-left: auto;
+		font-size: 20px;
+
+		.hoverUnderlineEffect {
+			display: inline-block;
+			position: relative;
+			padding-bottom: $sub-section-padding;
+			text-decoration: none;
+			transition: $transition-main;
+
+			&:hover {
+				color: $secondary-color;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 0%;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+
+				transition: all 0.2s ease-in-out;
+			}
+
+			&:hover:before {
+				width: 100%;
+				left: 0;
+				background-color: $secondary-color;
+			}
+		}
+	}
+}
+
+// HEADER STYLING END
+
+// HERO SECTION STYLING START
+
+.home {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: 0 10%;
+	background: url('https://dl.dropboxusercontent.com/s/sb9gdvztwf7z198/background-portfolio-2.png?dl=0') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.home-content {
+	// background-color: #252525;
+	padding: $section-padding;
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+
+	h1 {
+		font-size: 56px;
+		font-weight: 700;
+		line-height: 1.2;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			animation: showRight 1s ease forwards;
+			animation-delay: 1s;
+		}
+	}
+
+	h3 {
+		font-size: $sub-heading-font-size;
+		font-weight: 700;
+		color: $secondary-color;
+		letter-spacing: 0.05rem;
+		margin-top: 10px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			animation: showRight 1s ease forwards;
+			animation-delay: 1.5s;
+		}
+	}
+
+	p {
+		font-size: $font-size;
+		margin: 10px 0 30px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			animation: showRight 1s ease forwards;
+			animation-delay: 1.75s;
+		}
+	}
+
+	.btn-wrapper {
+		width: 345px;
+		height: 50px;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			animation: showRight 1s ease forwards;
+			animation-delay: 2.2s;
+			z-index: 2;
+		}
+
+		a {
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 150px;
+			height: 100%;
+			background-color: $secondary-color;
+			border: $border-primary;
+			border-radius: 8px;
+			font-size: 19px;
+			color: #081b29;
+			text-decoration: none;
+			font-weight: 600;
+			letter-spacing: 1px;
+			z-index: 1;
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background-color: $primary-color;
+				z-index: -1;
+				transition: 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+
+		a:nth-child(1) {
+			width: 170px;
+		}
+
+		a:nth-child(2) {
+			background-color: transparent;
+			color: $secondary-color;
+
+			&::before {
+				background-color: $secondary-color;
+			}
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.link-wrapper {
+		margin: 3rem 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 220px;
+		gap: 2rem;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			animation: showRight 1s ease forwards;
+			animation-delay: 2.5s;
+			z-index: 2;
+		}
+
+		a {
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 50px;
+			background-color: transparent;
+			border: $border-primary;
+			border-radius: 50%;
+			font-size: 20px;
+			text-decoration: none;
+			z-index: 1;
+			overflow: hidden;
+			transition: $transition-main;
+
+			.bx {
+				color: $secondary-color;
+				transition: $transition-main;
+				font-size: 26px;
+			}
+
+			&:hover .bx {
+				color: black;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background: $secondary-color;
+
+				z-index: -1;
+				transition: $transition-main;
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// KEYFRAMES ANIMATIONS
+@keyframes showRight {
+	100% {
+		width: 0;
+	}
+}

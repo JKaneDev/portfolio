@@ -1,0 +1,200 @@
+@import '_variables';
+
+.portfolio {
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+
+	.heading {
+		color: white;
+		text-align: center;
+		font-size: $header-font-size;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-top: 2.5rem;
+	}
+
+	.project-select-wrapper {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+
+		button {
+			padding: 0.5rem;
+			color: white;
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 195px;
+			height: 100%;
+			background-color: $secondary-color;
+			border: $border-primary;
+			border-radius: 8px;
+			font-size: 19px;
+			color: #081b29;
+			text-decoration: none;
+			font-weight: 600;
+			letter-spacing: 1px;
+			z-index: 1;
+			overflow: hidden;
+			cursor: pointer;
+
+			&.selected {
+				border: 2px solid white;
+				color: white;
+			}
+
+			&:active {
+				border: 2px solid white;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background-color: $primary-color;
+				z-index: -1;
+				transition: 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
+.project-options {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 2rem;
+	position: relative;
+	margin-bottom: 2rem;
+
+	a {
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background-color: transparent;
+		border: $border-primary;
+		border-radius: 50%;
+		font-size: 20px;
+		text-decoration: none;
+		z-index: 1;
+		overflow: hidden;
+		transition: $transition-main;
+
+		.bx {
+			color: $secondary-color;
+			transition: $transition-main;
+			font-size: 26px;
+		}
+
+		&:hover .bx {
+			color: black;
+			transform: rotate(-360deg);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0%;
+			height: 100%;
+			background: $secondary-color;
+
+			z-index: -1;
+			transition: $transition-main;
+		}
+
+		&:hover::before {
+			width: 100%;
+		}
+	}
+}
+
+.portfolio-container {
+	margin-top: 2rem;
+	height: 100vh;
+
+	@media (max-height: 700px) {
+		height: auto;
+	}
+
+	.swiper {
+		background-color: black;
+		border: 1px solid white;
+		width: 90%;
+		height: 90%;
+		cursor: pointer;
+		position: relative;
+
+		@media (max-height: 700px) {
+			height: 55vh;
+		}
+
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				max-width: 90%;
+				max-height: 90%;
+			}
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			color: white;
+			transition: $transition-main;
+		}
+
+		.swiper-button-next:hover,
+		.swiper-button-prev:hover {
+			color: $secondary-color;
+			transform: scale(1.1);
+		}
+
+		.swiper-button-next {
+			padding-right: 2rem;
+		}
+
+		.swiper-button-prev {
+			padding-left: 2rem;
+		}
+
+		.swiper-pagination {
+			margin-bottom: 1rem;
+		}
+
+		.swiper-pagination-bullet {
+			background-color: #fff;
+			transition: $transition-main;
+
+			&:hover {
+				background: $secondary-color;
+			}
+		}
+	}
+}
