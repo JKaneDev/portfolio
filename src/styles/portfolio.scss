@@ -85,6 +85,7 @@
 	width: 100%;
 	gap: 2rem;
 	position: relative;
+	margin-bottom: 2rem;
 
 	a {
 		position: relative;
@@ -133,6 +134,7 @@
 }
 
 .portfolio-container {
+	margin-top: 2rem;
 	height: 100vh;
 
 	@media (max-height: 700px) {
