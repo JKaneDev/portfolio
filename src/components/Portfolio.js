@@ -70,10 +70,6 @@ const Portfolio = forwardRef((props, ref) => {
 							</SwiperSlide>
 						))}
 					</Swiper>
-
-					{/* <div className='portfolio-layer'>
-					<h4>Twitter Clone - Ethereum</h4>
-				</div> */}
 				</div>
 			) : (
 				<></>
