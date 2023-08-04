@@ -21,13 +21,13 @@ const Home = ({ homeRef, aboutRef, portfolioRef }) => {
 					James.
 				</a>
 				<nav className='navbar'>
-					<a href='' className='hoverUnderlineEffect' onClick={goToHome}>
+					<a href='#' className='hoverUnderlineEffect' onClick={goToHome}>
 						Home
 					</a>
-					<a href='' className='hoverUnderlineEffect' onClick={goToAbout}>
+					<a href='#' className='hoverUnderlineEffect' onClick={goToAbout}>
 						About
 					</a>
-					<a href='' className='hoverUnderlineEffect' onClick={goToPortfolio}>
+					<a href='#' className='hoverUnderlineEffect' onClick={goToPortfolio}>
 						Portfolio
 					</a>
 					<a
