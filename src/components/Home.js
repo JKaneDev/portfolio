@@ -21,13 +21,13 @@ const Home = ({ homeRef, aboutRef, portfolioRef }) => {
 					James.
 				</a>
 				<nav className='navbar'>
-					<a href='' className='hoverUnderlineEffect' onClick={goToHome}>
+					<a href='#' className='hoverUnderlineEffect' onClick={goToHome}>
 						Home
 					</a>
-					<a href='' className='hoverUnderlineEffect' onClick={goToAbout}>
+					<a href='#' className='hoverUnderlineEffect' onClick={goToAbout}>
 						About
 					</a>
-					<a href='' className='hoverUnderlineEffect' onClick={goToPortfolio}>
+					<a href='#' className='hoverUnderlineEffect' onClick={goToPortfolio}>
 						Portfolio
 					</a>
 					<a
@@ -46,9 +46,10 @@ const Home = ({ homeRef, aboutRef, portfolioRef }) => {
 					<h1>Hi, I'm James Kane</h1>
 					<h3>Blockchain Developer</h3>
 					<p>
-						Web3 enthusiast on an adventure to build the future of the internet and participating in the revolution of a
-						decentralized web. Fostering an ever-growing obsession with Blockchain and NFTs. Wondering if I'm the only
-						one that has frequent dreams about Smart Contracts.
+						Smart Contract and Front-End React Developer with 1.5 years of experience building 20+ independent projects.
+						Solid expertise in each stage of the decentralized application process. A keen intuition for problem solving
+						and a focus on well-tested, gas-optimized and secure smart contracts with aesthetic and intuitive
+						front-ends.
 					</p>
 					<div className='btn-wrapper'>
 						<a
@@ -64,7 +65,7 @@ const Home = ({ homeRef, aboutRef, portfolioRef }) => {
 						</a>
 					</div>
 					<div className='link-wrapper'>
-						<a href='https://twitter.com/_jtkane'>
+						<a href='#'>
 							<i className='bx bxl-twitter' target='_blank' rel='noopener noreferrer'></i>
 						</a>
 						<a href='https://www.linkedin.com/in/james-kane-3190b8276/'>
